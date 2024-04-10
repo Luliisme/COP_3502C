@@ -18,8 +18,14 @@ def encode(password):
     return encodeFINAL
 
 def decode(encoded):
-# Partner Code
-
+    # Partner Code
+    decoded = ''
+    for digit in encoded:
+        if int(digit) >= 3:
+            decoded += str(int(digit)-3)
+        else:
+            decoded += str(int(digit)+10-3)
+    return decoded
 
 if __name__ == '__main__':
 
